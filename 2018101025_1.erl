@@ -5,9 +5,9 @@
 main(Args) ->
     [Input_file, Output_file] = Args,
     % read input file
-    {Ok, Input_desc} = file:open(Input_file, [read]),
-    {Ok, [P, Token]} = io:fread(Input_desc, [], "~d~d"),
-    file:close(Input_file),
+    {Ok, Fin} = file:open(Input_file, [read]),
+    {Ok, [P, Token]} = io:fread(Fin, [], "~d~d"),
+    file:close(Fin),
     % Open output file
     {Ok, Fout} = file:open(Output_file, [write]),
     % spwan root 0 process
