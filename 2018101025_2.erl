@@ -21,7 +21,7 @@ main(Args) ->
     Pid_lst = create_process(self(), P, M, N, Edges, 1,
 			     No_per_process, []),
     Final_dist = loop(N, P, 0, Pid_lst, Distance),
-    io:format("Ans ~w ~n", [Final_dist]),
+    % io:format("Ans ~w ~n", [Final_dist]),
     {Ok, Fout} = file:open(Output_file, [write]),
     % write output to file
     [io:format(Fout, "~w ~w~n",
@@ -60,7 +60,7 @@ loop(N, P, Cnt, Pid_lst, Distance) ->
     % send updated distance array to all pid's
     [Pid ! {Distance} || Pid <- Pid_lst],
     Final_dist = recieve_distance(P, 0, Distance),
-    io:format("Updated ~w ~n", [Final_dist]),
+    % io:format("Updated ~w ~n", [Final_dist]),
     loop(N, P, Cnt + 1, Pid_lst, Final_dist).
 
 recieve_distance(P, P, Distance) -> Distance;
