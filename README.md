@@ -20,7 +20,7 @@ Write a program to pass an integer token value around all processes in a ring-li
 ### Complexity Analysis
 
 - Message Complexity: N, Each process sends one msg to its next process. So toal N msgs are sent.
-- Time Complexity: O(N)
+- Time Complexity: `O(N)`
 
 ## Problem 2
 
@@ -44,7 +44,6 @@ Parallel Bellman Ford Algorithm is implemented to find shortest path from source
 
 ### Complexity Analysis
 
-- Message Complexity: (P)\*2(V-1) or O(PV),
+- Message Complexity: `O(PV)`,
   where (V - 1) times message is sent to P processes and P processes send message back to root process.
-- Time Complexity: O(VE/P) + O(PV) \* Avg message time.
-  Bellman Ford algo has O(VE) time complexity, but in parallel version E is divides among P processes working in parallel.
+- Time Complexity: `O(VE/P) + O(PV) \* Avg message time`. Bellman Ford algo has `O(VE)` time complexity, but in parallel version E is divides among P processes working in parallel.
