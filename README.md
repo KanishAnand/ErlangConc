@@ -1,4 +1,5 @@
 # Erlang Parallel Programming
+Few algorithms implemented in a distributed manner using [Erlang](https://www.erlang.org/).
 
 ## Problem 1
 
