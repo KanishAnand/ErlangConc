@@ -6,8 +6,8 @@ Write a program to pass an integer token value around all processes in a ring-li
 
 ### Steps to run the code
 
-1. erlc 2018101025_1.erl
-2. erl -noshell -s 2018101025_1 main <input_file> <output_file> -s init stop
+1. `erlc 2018101025_1.erl`
+2. `erl -noshell -s 2018101025_1 main <input_file> <output_file> -s init stop`
 
 ### Implementation
 
@@ -19,9 +19,8 @@ Write a program to pass an integer token value around all processes in a ring-li
 
 ### Complexity Analysis
 
-Message Complexity: N, Each process sends one msg to its next process. So toal N msgs are sent.
-
-Time Complexity: O(N)
+- Message Complexity: N, Each process sends one msg to its next process. So toal N msgs are sent.
+- Time Complexity: O(N)
 
 ## Problem 2
 
@@ -29,8 +28,8 @@ Given a non-negative weighted, undirected, connected graph and a source vertex i
 
 ### Steps to run the code
 
-1. erlc 2018101025_2.erl
-2. erl -noshell -s 2018101025_2 main <input_file> <output_file> -s init stop
+1. `erlc 2018101025_2.erl`
+2. `erl -noshell -s 2018101025_2 main <input_file> <output_file> -s init stop`
 
 ### Implementation
 
@@ -45,8 +44,7 @@ Parallel Bellman Ford Algorithm is implemented to find shortest path from source
 
 ### Complexity Analysis
 
-Message Complexity: (P)\*2(V-1) or O(PV),
-where (V - 1) times message is sent to P processes and P processes send message back to root process.
-
-Time Complexity: O(VE/P) + O(PV) \* Avg message time.
-Bellman Ford algo has O(VE) time complexity, but in parallel version E is divides among P processes working in parallel.
+- Message Complexity: (P)\*2(V-1) or O(PV),
+  where (V - 1) times message is sent to P processes and P processes send message back to root process.
+- Time Complexity: O(VE/P) + O(PV) \* Avg message time.
+  Bellman Ford algo has O(VE) time complexity, but in parallel version E is divides among P processes working in parallel.
