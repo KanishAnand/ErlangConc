@@ -38,7 +38,7 @@ Parallel Bellman Ford Algorithm is implemented to find shortest path from source
 - P processes are created where P is the no. of processes and V is the no. of vertices.
 - Edge list is distributed among processes equally.
 - Bellman Ford algo: for 1 to (V - 1) - relax all the edges and update Distance array. After (V - 1) loops, we get final Distance array.
-- Here, for 1 to (V - 1) -> Main process shares Distance array with every process. Every process then relaxes their edges and returns new Distance array to Root process. Root process gets P Distance array's.
+- Here, for 1 to (V - 1) - Main process shares Distance array with every process. Every process then relaxes their edges and returns new Distance array to Root process. Root process gets P Distance array's.
 - Root process then merges all recieved distance arrays by taking minimum of distance of each node and prepares final distance array.
 - This is done V-1 times and the final array is stored in output file.
 
